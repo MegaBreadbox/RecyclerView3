@@ -17,6 +17,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
    private ArrayList<List> cards = new ArrayList<>();
    private Context cContext;
 
+
     public CardAdapter(Context cContext) {
         this.cContext = cContext;
     }
@@ -32,6 +33,13 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull CardAdapter.ViewHolder holder, int position) {
+        holder.txtTitle.setText(cards.get(position).getNumberString());
+        holder.txtDesc.setText(cards.get(position).getIdentityString());
+    }
+
+    public void setupCards(ArrayList<List> cards){
+        this.cards = cards;
+        notifyDataSetChanged();
 
     }
 
@@ -51,6 +59,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
             cardList = itemView.findViewById(R.id.cardList);
             txtTitle = itemView.findViewById(R.id.txtTitle);
             txtDesc = itemView.findViewById(R.id.txtDesc);
+
 
         }
     }

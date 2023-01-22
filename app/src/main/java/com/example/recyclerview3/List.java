@@ -13,6 +13,8 @@ public class List {
         return number;
     }
 
+    public String getNumberString(){return Integer.toString(number);}
+
     public void setNumber(int number) {
         this.number = number;
     }
@@ -20,6 +22,8 @@ public class List {
     public int getIdentitiy() {
         return identitiy;
     }
+
+    public String getIdentityString(){ return Integer.toString(identitiy);}
 
     public void setIdentitiy(int identitiy) {
         this.identitiy = identitiy;
