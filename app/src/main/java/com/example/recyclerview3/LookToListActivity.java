@@ -15,7 +15,7 @@ public class LookToListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_look_to_list);
 
-        CardRecView = findViewById(R.id.cardList);
+        CardRecView = findViewById(R.id.cardRecView);
         CardRecView.setLayoutManager(new LinearLayoutManager(this));
 
     }
